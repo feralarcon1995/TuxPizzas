@@ -1,0 +1,33 @@
+{% extends "TuxPizzas/padre.html" %}
+
+{% load static %}
+
+{% block container %}
+
+<section>
+    <h2 class="display-4 fw-bolder text-center p-3"> Crear Producto</h2>
+    <article class="row form-px">
+
+        <img src="https://images.unsplash.com/photo-1609525313344-a56b96f20718?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+            alt="empanadas" class="col d-none d-sm-block col-lg-6 w-50">
+
+        <form action="" method="POST" class="col col-sm-12 col-lg-6 form-rg ">{% csrf_token %}
+
+            <div class="form-list">
+                {{ miFormulario.as_p}}
+            </div>
+
+            {% if miForm.errors %}
+            <p class="text-danger fw-bolder">Por favor ingrese datos validos.</p>
+            {% endif %}
+
+            <button type="submit" class="btn btn-primary mt-3">Crear Producto</button>
+
+        </form>
+
+    </article>
+</section>
+
+
+
+{% endblock %}
