@@ -6,6 +6,8 @@ TAMANIO_OPCIONES = (
     ("2", "Grande"),
     ("3", "Familiar"),
 )
+
+
 class Pizzas(models.Model):
     
     nombre = models.CharField(max_length=30)
@@ -16,4 +18,19 @@ class Pizzas(models.Model):
           )
     ingredientes = models.CharField(max_length=60)
     precio = models.IntegerField() 
+
+
+class Empanadas(models.Model):
+    
+    nombre = models.CharField(max_length=30)
+    foto = models.CharField(max_length=9999999)     
+    relleno = models.CharField(max_length=50)
+    precio = models.IntegerField() 
+
+class Hamburguesas(models.Model):
+
+    nombre = models.CharField(max_length=30)
+    foto = models.CharField(max_length=9999999)     
+    ingredientes= models.CharField(max_length=50)
+    precio = models.IntegerField()   
 

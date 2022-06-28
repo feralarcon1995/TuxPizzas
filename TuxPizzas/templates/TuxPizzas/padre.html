@@ -20,16 +20,45 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">TuxPizzas</a>
+            <a class="navbar-brand" href="{% url 'Inicio' %}">TuxPizzas</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'Inicio' %}">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'Pizzas' %}">Pizzas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'Formulario' %}">Crear Producto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'BuscarPizza' %}">Buscar Pizza</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="{% url 'Inicio' %}">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'Pizzas' %}">Pizzas</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'Empanadas' %}">Empanadas</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'Hamburguesas' %}">Hamburguesas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Crear Productos</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'Formulario' %}">Pizzas</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'FormularioEmpanadas' %}">Empanadas</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'FormularioHamburguesas' %}">Hamburguesas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'BuscarPizza' %}">Buscar Producto</a></li>
 
                 </ul>
                 <form class="d-flex">
@@ -42,15 +71,15 @@
             </div>
         </div>
     </nav>
- 
+
     {% block container %}
 
     {% endblock %}
-    
+
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
+            <p class="m-0 text-center text-white p-footer">Copyright &copy; <a href="https://www.linkedin.com/in/feralarcon1995/" target="_blank" rel="noopener noreferrer" class="p-footer">Fernando Alarcon 2022</a></p>
         </div>
     </footer>
     <!-- Bootstrap core JS-->

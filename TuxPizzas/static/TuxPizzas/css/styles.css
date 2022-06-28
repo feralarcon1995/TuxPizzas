@@ -193,6 +193,11 @@ header {
 .s-ancho{
   width: 50%;
 }
+
+.p-footer {
+  text-decoration: none !important;
+  color: #eee;
+}
 @media (max-width:1024px) {
 
 

@@ -4,11 +4,11 @@
 
 {% block container %}
 
-{% if pizzas %}
 
 <section class="container p-5 bg-alto">
+    {% if pizzas %}
 
-    <h2 class="display-4 fw-bolder text-center p-3">Pizzas Encontradas</h2>
+    <h2 class="display-4 fw-bolder text-center p-3">Productos Encontradas</h2>
 
     {% for pizza in pizzas %}
 
@@ -38,10 +38,12 @@
 
     {% else %}
 
-    <h1 class="display-4 fw-bolder text-center p-3">No existe ese producto.</h1>
+    <div class="bg-alto">
+        <h1 class="display-4 fw-bolder text-center p-3">No existe ese producto.</h1>
+    </div>
+    {% endif %}
 
 </section>
 
-{% endif %}
 
 {% endblock %}
