@@ -17,8 +17,8 @@ Creacion de app django
 
 Utilizo una plantilla de bootstrap modificada y adaptada a la necesidad, en la cual renderizo los datos desde el backend, usando la herencia de padre a hijo para altenar las diferentes vistas que cree desde ahi.
 
-## models.pý
-En este archivo se encuentra el modelaje de datos usado para el backend del producto.
+## models.py
+En este archivo se encuentra el modelaje de datos de la tabla , Pizzas , Empanadas y Hamburguesas.
 
 ## forms.py 
 En este archivo se encuentra el formulario que hace envio de los datos ingresados al backend.
@@ -32,11 +32,14 @@ Archivo donde esta la configuracion de rutas.
 
 ## Inicio
 
-En esta page podemos encontrar un viztaso general de la web, ver algunos productos traidos directamente de la db
+En esta page podemos encontrar un viztaso general de la web, ver algunos productos traidos directamente de la db.
 
-## Crear Pizza
+## Productos
+Aca podes ir a la seccion correspondiente por cada categoria, y asi encontrar los productos de la misma.
 
-En esa seccion podes ingresar los datos para crear una nueva pizza, datos que se cargan a la base de datos, a travez del modelo y del form 
+## Crear Producto
+
+En este menu podes elegir que producto crear, ya sea pizza, empanada o hamburguesa, estos datos que se cargan a la base de datos, a travez del modelo y del form para asi renderizar los productos cargados.
 
 ## Buscar pizza
 
